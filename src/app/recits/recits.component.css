@@ -1,0 +1,14 @@
+.recits-list {
+  padding: 20px;
+}
+
+.recits-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recits-list li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
