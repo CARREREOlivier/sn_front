@@ -1,1 +1,252 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Couleurs principales */
+  --primary-color: #2C3E50; /* Bleu foncé pour les titres */
+  --secondary-color: #356859; /* Vert foncé pour les liens */
+  --accent-color: #D1495B; /* Rouge brique pour les survols */
+  --background-color: #FDF6E3; /* Beige clair pour le fond */
+  --text-color: #333333; /* Gris foncé pour le texte principal */
+  --highlight-color: #D9BF77; /* Doré pour les bordures et highlights */
+  --panel-background: #FFFFFF; /* Blanc pour les panneaux */
+  --panel-border: #E0E0E0; /* Gris clair pour les bordures */
+  --footer-background: #333333; /* Fond sombre pour le pied de page */
+  --footer-link: #D9BF77; /* Couleur des liens dans le pied de page */
+}
+/* Style global */
+body {
+  font-family: 'Georgia', serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* Titres */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Panneaux */
+.panel {
+  background-color: var(--panel-background);
+  border: 2px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation au survol */
+}
+
+/* Effet au survol */
+.panel:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
+  transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+/* Bordure mise en valeur */
+.panel-header {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--highlight-color); /* Bordure plus visible */
+  padding-bottom: 5px;
+}
+
+
+/* Tableau */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+table th, table td {
+  border: 1px solid var(--highlight-color); /* Ligne dorée */
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #FAF3E0; /* Fond doux pour les en-têtes */
+  font-weight: bold;
+  text-transform: uppercase; /* Texte en majuscules pour l'effet officiel */
+}
+
+table tr:hover {
+  background-color: #F9EFD3; /* Légère teinte au survol */
+}
+
+/* Liens */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+/* Panneaux*/
+.news-panel {
+  background-color: #FFFFFF; /* Fond blanc immaculé pour un style formel */
+  border: 3px solid #2C3E50; /* Bordure bleu foncé pour un effet officiel */
+  border-radius: 10px; /* Coins légèrement arrondis pour adoucir */
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre marquée pour un effet de relief */
+  position: relative;
+}
+/* Titre du message */
+.news-header {
+  font-family: 'Playfair Display', serif; /* Style littéraire et officiel */
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #2C3E50; /* Bleu foncé pour un ton sérieux */
+  text-align: center;
+  text-transform: uppercase; /* Texte en majuscules pour le caractère officiel */
+  margin-bottom: 10px;
+  border-bottom: 2px solid #D9BF77; /* Ligne dorée en dessous */
+  padding-bottom: 10px;
+}
+
+.news-panel .news-header {
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.news-panel .news-content {
+  font-style: italic;
+}
+/* Sceau officiel */
+.news-panel:before {
+  content: 'Message Officiel';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #D9BF77; /* Fond doré */
+  color: white;
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+/* Enveloppe visuelle */
+.news-panel:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(to right, #2C3E50, #D9BF77, #2C3E50); /* Ligne dégradée bleu/doré */
+}
+
+/* Contenu du message */
+.news-content {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333333;
+  text-align: justify;
+}
+
+
+/* Date du message */
+.news-date {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #777;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*autres panneaux spécifiques*/
+.recits-panel, .recits-table {
+  background-color: var(--panel-background); /* Fond blanc */
+  border: 3px solid var(--primary-color); /* Bordure bleu foncé pour l'effet officiel */
+  border-radius: 10px; /* Coins arrondis */
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre marquée */
+  position: relative;
+  overflow: hidden;
+}
+
+/* En-tête avec capsule officielle */
+.recits-panel:before, .recits-table:before {
+  content: 'Derniers Récits';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--highlight-color); /* Capsule dorée */
+  color: white;
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Recherche et tri */
+.search-bar {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: 1px solid var(--panel-border);
+  border-radius: 5px;
+}
+
+.sort-button {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: var(--primary-color); /* Bleu foncé pour le bouton */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sort-button:hover {
+  background-color: var(--highlight-color); /* Couleur dorée au survol */
+}
+
+/* Footer */
+footer {
+  background-color: var(--footer-background);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--footer-link);
+}
+
+footer a:hover {
+  color: white;
+}
+
