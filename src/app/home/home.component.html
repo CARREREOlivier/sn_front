@@ -1,0 +1,60 @@
+<div class="home-container">
+  <!-- Panneau de gauche : Dernière news -->
+  <div class="panel news-panel" data-label="Message Officiel">
+    <div class="news-header">
+      <h3>{{ latestNews?.title }}</h3>
+      <p class="news-date">{{ latestNews?.last_update_date | date: 'dd MMMM yyyy' }}</p>
+      <hr />
+    </div>
+    <div class="news-content">
+      <p>{{ latestNews?.content | slice:0:300 }}...</p>
+      <a [routerLink]="['/news', latestNews?.news_id]">Lire la suite</a>
+    </div>
+  </div>
+
+  <!-- Panneau de droite : Derniers récits -->
+  <div class="panel recits-panel" data-label="Derniers Récits">
+    <div class="recits-content">
+    <h3>Derniers Récits</h3>
+    <ul class="recits-list">
+      <li><strong>Titre :</strong> Récit 1 <em>(Dernière modif : [Date])</em></li>
+      <li><strong>Titre :</strong> Récit 2 <em>(Dernière modif : [Date])</em></li>
+      <!-- Plus de récits -->
+    </ul>
+    </div>
+  </div>
+
+  <!-- Tableau des récits -->
+  <div class="panel recits-table" data-label="Tableau des Récits">
+    <h3>Liste des Récits</h3>
+    <div class="table-actions">
+    <input type="text" placeholder="Rechercher un récit..." class="search-bar" />
+    <button class="sort-button">Trier</button>
+    </div>
+    <table>
+      <thead>
+      <tr>
+        <th>Titre</th>
+        <th>Auteur</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Récit 1</td>
+        <td>Auteur 1</td>
+        <td class="description">Courte description
+          <span class="tooltip">Description complète ici</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Récit 2</td>
+        <td>Auteur 2</td>
+        <td class="description">Courte description
+          <span class="tooltip">Description complète ici</span>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

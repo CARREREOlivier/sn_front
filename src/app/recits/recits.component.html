@@ -1,0 +1,10 @@
+<div class="recits-list">
+  <h2>Récits</h2>
+  <ul>
+    <li *ngFor="let recit of recits">
+      <h3>{{ recit.title }}</h3>
+      <p>{{ recit.description }}</p>
+      <p>Date de création : {{ recit.creation_date | date: 'dd MMMM yyyy' }}</p>
+    </li>
+  </ul>
+</div>
