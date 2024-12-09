@@ -30,6 +30,9 @@ export class NewsService {
     return this.http.get<News>(`${this.apiUrl}/latest`);
   }
 
+  getAllNews(): Observable<News[]> {
+    return this.http.get<News[]>(this.apiUrl);
+  }
 
 }
 
