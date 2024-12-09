@@ -40,18 +40,12 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>Récit 1</td>
-        <td>Auteur 1</td>
-        <td class="description">Courte description
-          <span class="tooltip">Description complète ici</span>
-        </td>
-      </tr>
-      <tr>
-        <td>Récit 2</td>
-        <td>Auteur 2</td>
-        <td class="description">Courte description
-          <span class="tooltip">Description complète ici</span>
+      <tr *ngFor="let recit of recits">
+        <td>{{ recit.title }}</td>
+        <td>{{ recit.author }}</td>
+        <td class="description">
+          {{ recit.description | slice:0:50 }}...
+          <span class="tooltip">{{ recit.description }}</span>
         </td>
       </tr>
       </tbody>
