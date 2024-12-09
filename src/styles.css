@@ -48,13 +48,13 @@ h3 {
   border-radius: 10px;
   padding: 20px;
   margin: 10px 0;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Ombre plus marquée */
+  /*box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); */ /* Ombre plus marquée */
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation au survol */
 }
 
 /* Effet au survol */
 .panel:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
+  /*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus intense */
   transform: translateY(-5px); /* Légère élévation au survol */
 }
 
@@ -111,7 +111,7 @@ a:hover {
   border-radius: 10px; /* Coins légèrement arrondis pour adoucir */
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre marquée pour un effet de relief */
+  /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre marquée pour un effet de relief */
   position: relative;
 }
 /* Titre du message */
@@ -150,7 +150,7 @@ a:hover {
   text-transform: uppercase;
   padding: 5px 15px;
   border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
 }
 /* Enveloppe visuelle */
 .news-panel:after {
@@ -160,7 +160,7 @@ a:hover {
   left: 0;
   right: 0;
   height: 10px;
-  background: linear-gradient(to right, #2C3E50, #D9BF77, #2C3E50); /* Ligne dégradée bleu/doré */
+  /*background: linear-gradient(to right, #2C3E50, #D9BF77, #2C3E50); /* Ligne dégradée bleu/doré */
 }
 
 /* Contenu du message */
@@ -188,7 +188,7 @@ a:hover {
   border-radius: 10px; /* Coins arrondis */
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre marquée */
+ /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombre marquée */
   position: relative;
   overflow: hidden;
 }
@@ -207,7 +207,7 @@ a:hover {
   text-transform: uppercase;
   padding: 5px 15px;
   border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
 }
 
 /* Recherche et tri */
