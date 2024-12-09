@@ -28,7 +28,7 @@
   border-radius: 10px;
   padding: 20px;
   margin: 20px 0;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);*/
   overflow: visible; /* Assure que les capsules ne soient pas coupées */
 }
 
@@ -48,7 +48,7 @@
   text-transform: uppercase;
   padding: 5px 15px;
   border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);*/
 }
 
 /* Contenu du panneau News */
@@ -132,7 +132,7 @@ table tr:hover {
   border: 1px solid var(--panel-border);
   padding: 10px;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .description:hover .tooltip {

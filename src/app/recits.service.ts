@@ -6,6 +6,7 @@ interface Recit {
   recit_id: number;
   title: string;
   description: string;
+  author : string;
   creation_date: string;
 }
 
@@ -20,4 +21,6 @@ export class RecitsService {
   getRecits(): Observable<Recit[]> {
     return this.http.get<Recit[]>(this.apiUrl);
   }
+
+
 }

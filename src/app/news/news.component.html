@@ -1,0 +1,23 @@
+<div class="news-container">
+  <h2>Liste des News</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>Publié Le</th>
+      <th>Titre</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let news of newsList">
+      <td>{{ news.creation_date | date: 'dd MMMM yyyy' }}</td>
+      <td>{{ news.title }}</td>
+      <td>
+        <button (click)="readNews(news.news_id)">Lire</button>
+        <button disabled>Éditer</button>
+        <button disabled>Effacer</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
