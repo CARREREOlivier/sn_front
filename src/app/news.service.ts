@@ -34,5 +34,9 @@ export class NewsService {
     return this.http.get<News[]>(this.apiUrl);
   }
 
+  createNews(news: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/create`, news);
+  }
+
 }
 
