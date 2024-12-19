@@ -1,0 +1,23 @@
+<div class="news-form">
+  <h2>Ajouter une News</h2>
+  <form [formGroup]="newsForm" (ngSubmit)="submitForm()">
+    <label for="title">Titre</label>
+    <input id="title" formControlName="title" type="text" placeholder="Titre de la news" />
+
+    <label for="content">Contenu</label>
+    <div class="toolbar">
+      <button type="button" (click)="formatText('bold')"><b>B</b></button>
+      <button type="button" (click)="formatText('italic')"><i>I</i></button>
+      <button type="button" (click)="formatText('underline')"><u>U</u></button>
+    </div>
+    <div
+      id="editor"
+      contenteditable="true"
+      dir="ltr"
+      (input)="updateContent($event)"
+    ></div>
+
+
+    <button type="submit" [disabled]="newsForm.invalid">Ajouter</button>
+  </form>
+</div>
