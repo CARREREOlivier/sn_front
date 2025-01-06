@@ -10,8 +10,8 @@ export const routes: Routes = [
   { path: 'recits', component: RecitsComponent },
   { path: 'news', component: NewsComponent },
   { path: 'news/add', component: NewsFormComponent },
+  { path: 'news/edit/:id',  component: NewsFormComponent},
   { path: 'news/:id', component: NewsDetailsComponent },
-
 
   { path: '**', redirectTo: '' }, // Redirection vers la page d'accueil
 ];

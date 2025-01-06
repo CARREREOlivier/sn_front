@@ -38,4 +38,8 @@ export class NewsComponent implements OnInit {
   goToAddNews() {
     this.router.navigate(['/news/add']);
   }
+  editNews(id: number): void {
+    this.router.navigate([`/news/edit/${id}`]);
+  }
+
 }

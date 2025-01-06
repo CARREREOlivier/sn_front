@@ -15,7 +15,7 @@
       <td>{{ news.title }}</td>
       <td>
         <button (click)="readNews(news.news_id)">Lire</button>
-        <button disabled>Éditer</button>
+        <button (click)="editNews(news.news_id)">Éditer</button>
         <button disabled>Effacer</button>
       </td>
     </tr>

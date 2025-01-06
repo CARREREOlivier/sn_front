@@ -37,6 +37,10 @@ export class NewsService {
   createNews(news: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/create`, news);
   }
+  updateNews(id: number, news: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/edit/${id}`, news);
+  }
+
 
 }
 
