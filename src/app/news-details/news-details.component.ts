@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NewsService } from '../news.service';
 import { CommonModule } from '@angular/common';
+import {DomSanitizer, SafeHtml} from '@angular/platform-browser';
 
 interface News {
   news_id: number;
@@ -20,17 +21,28 @@ interface News {
   providers: [NewsService]
 })
 export class NewsDetailsComponent implements OnInit {
-  news: News | null = null;
+  news: any = null;
+  newsContent: SafeHtml | null = null;
 
   constructor(
-    private route: ActivatedRoute,
-    private newsService: NewsService
+    private sanitizer: DomSanitizer,
+    private newsService: NewsService,
+    private route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
-    const newsId = Number(this.route.snapshot.paramMap.get('id'));
-    this.newsService.getNewsById(newsId).subscribe((data) => {
-      this.news = data;
-    });
+    const newsId = this.route.snapshot.paramMap.get('id');
+    if (newsId) {
+      this.newsService.getNewsById(+newsId).subscribe({
+        next: (data) => {
+          this.news = data; // Assigne les données de la news à la propriété `news`
+        },
+        error: (error) => {
+          console.error('Erreur lors du chargement de la news :', error);
+        },
+      });
+    }
   }
+
+
 }
