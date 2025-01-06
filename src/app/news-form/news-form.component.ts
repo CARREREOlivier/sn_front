@@ -53,7 +53,7 @@ export class NewsFormComponent {
 
 
   updateContent(event: Event): void {
-    const editorContent = (event.target as HTMLElement).innerText; // innerText conserve uniquement le texte
+    const editorContent = (event.target as HTMLElement).innerHTML; // Inclut les balises HTML
     this.newsForm.get('content')?.setValue(editorContent);
   }
 
