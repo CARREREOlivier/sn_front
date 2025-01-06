@@ -16,7 +16,7 @@
       <td>
         <button (click)="readNews(news.news_id)">Lire</button>
         <button (click)="editNews(news.news_id)">Éditer</button>
-        <button disabled>Effacer</button>
+        <button (click)="confirmDelete(news.news_id)">Effacer</button>
       </td>
     </tr>
     </tbody>

@@ -40,7 +40,9 @@ export class NewsService {
   updateNews(id: number, news: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/edit/${id}`, news);
   }
-
+  deleteNews(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/delete/${id}`);
+  }
 
 }
 
