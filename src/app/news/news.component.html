@@ -1,5 +1,6 @@
 <div class="news-container">
   <h2>Liste des News</h2>
+  <button (click)="goToAddNews()">Ajouter une News</button>
   <table>
     <thead>
     <tr>
@@ -14,8 +15,8 @@
       <td>{{ news.title }}</td>
       <td>
         <button (click)="readNews(news.news_id)">Lire</button>
-        <button disabled>Éditer</button>
-        <button disabled>Effacer</button>
+        <button (click)="editNews(news.news_id)">Éditer</button>
+        <button (click)="confirmDelete(news.news_id)">Effacer</button>
       </td>
     </tr>
     </tbody>

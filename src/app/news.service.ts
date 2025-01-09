@@ -34,5 +34,15 @@ export class NewsService {
     return this.http.get<News[]>(this.apiUrl);
   }
 
+  createNews(news: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}/create`, news);
+  }
+  updateNews(id: number, news: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/edit/${id}`, news);
+  }
+  deleteNews(id: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/delete/${id}`);
+  }
+
 }
 

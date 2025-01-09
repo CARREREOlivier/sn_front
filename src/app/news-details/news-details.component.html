@@ -3,7 +3,7 @@
   <p><strong>Date de création :</strong> {{ news.creation_date | date: 'dd MMMM yyyy' }}</p>
   <p><strong>Dernière mise à jour :</strong> {{ news.last_update_date | date: 'dd MMMM yyyy' }}</p>
   <div class="news-content">
-    <p>{{ news.content }}</p>
+    <div [innerHTML]="news.content"></div>
   </div>
 </div>
 <div *ngIf="!news">
